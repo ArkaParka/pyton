@@ -5,7 +5,10 @@ def new_game():
 
     print('{Приветственное сообщение от игры}')
     count = 0
-    while count < 5:
+    while count <= 5:
+        if count == 5:
+            print(f'Вы проиграли. Было загадано: {n}')
+            break
         count += 1
         input_num = int(input('Введите число: '))
         if input_num < n:
@@ -17,8 +20,7 @@ def new_game():
         elif input_num == n:
             print('Поздравляю! Вы угадали')
             break
-        elif count == 4:
-            print(f'Вы проиграли. Было загадано: {n}')
+
 
 
 new_game()
